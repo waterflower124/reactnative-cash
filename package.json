@@ -1,0 +1,72 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "test": "jest",
+    "build": "tsc --baseUrl . --noEmit",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "lint:fix": "tslint --fix -p tsconfig.json -c tslint.json",
+    "run:ios": "rm -rf ios/build && react-native run-ios --simulator 'iPhone 6s'",
+    "run:android": "react-native run-android",
+    "postinstall": "npx jetify"
+  },
+  "dependencies": {
+    "i18n-iso-countries": "^3.7.8",
+    "intl": "^1.2.5",
+    "moment": "^2.24.0",
+    "numeral": "^2.0.6",
+    "querystring": "^0.2.0",
+    "react": "16.6.3",
+    "react-native": "0.58.4",
+    "react-native-cookies": "^3.3.0",
+    "react-native-device-info": "^0.26.2",
+    "react-native-fs": "2.14",
+    "react-native-gesture-handler": "^1.0.15",
+    "react-native-linear-gradient": "^2.5.3",
+    "react-native-modal": "^7.0.2",
+    "react-native-push-notification": "^3.1.2",
+    "react-native-restart": "^0.0.9",
+    "react-native-sentry": "^0.41.1",
+    "react-native-snap-carousel": "^3.7.5",
+    "react-native-splash-screen": "^3.1.1",
+    "react-native-swiper": "^1.5.14",
+    "react-native-vector-icons": "^6.2.0",
+    "react-native-view-shot": "^2.5.0",
+    "react-navigation": "^3.1.4",
+    "react-navigation-redux-helpers": "^2.0.9",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "url-parse": "^1.4.4"
+  },
+  "devDependencies": {
+    "@types/numeral": "^0.0.25",
+    "@types/react": "^16.8.1",
+    "@types/react-native": "^0.57.32",
+    "@types/react-native-fs": "^2.8.2",
+    "@types/react-navigation": "^3.0.1",
+    "@types/react-redux": "^7.0.1",
+    "@types/url-parse": "^1.4.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "24.1.0",
+    "code-push-cli": "^2.1.9",
+    "jest": "^24.1.0",
+    "jetifier": "^1.6.4",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-native-typescript-transformer": "^1.2.11",
+    "react-test-renderer": "16.6.3",
+    "tslint": "^5.12.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "assets/fonts/"
+    ]
+  }
+}

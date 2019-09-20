@@ -1,0 +1,24 @@
+dependencies: \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/SentryClient.m \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/Sentry.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryClient.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryDefines.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryClient+Internal.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryDebugMeta.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentrySerializable.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryLog.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryDsn.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryError.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryUser.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryQueueableRequestManager.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryEvent.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryNSURLRequest.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryInstallation.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/SentryCrash.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/SentryCrashReportWriter.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Reporting/Filters/SentryCrashReportFilter.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitorType.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Installations/SentryCrashInstallation.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryBreadcrumbStore.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryFileManager.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/Sentry/include/SentryBreadcrumbTracker.h

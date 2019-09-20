@@ -1,0 +1,23 @@
+dependencies: \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/SentryCrashC.c \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/SentryCrashC.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitorType.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/SentryCrashReportWriter.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/SentryCrashCachedData.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashThread.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/SentryCrashReport.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitorContext.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashMachineContext.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/SentryCrashReportFixer.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/SentryCrashReportStore.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_Deadlock.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_User.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashFileUtils.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashObjC.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashString.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_System.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_Zombie.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Monitors/SentryCrashMonitor_AppState.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/SentryCrashSystemCapabilities.h \
+  /Volumes/DataDrive/Project/2019/9.12_moroco/gitlab/app/node_modules/react-native-sentry/ios/Sentry/Sources/SentryCrash/Recording/Tools/SentryCrashLogger.h

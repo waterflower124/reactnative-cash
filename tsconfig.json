@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "jsx": "react-native",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "preserveConstEnums": true,
+    "allowJs": false,
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "strictNullChecks": false,
+    "lib": ["dom", "es5", "es2015", "es2016", "es2017"],
+    "paths": {
+      "*": ["*", "*.ios", "*.android"]
+    },
+    "pretty": true,
+    "typeRoots": [ "./typings" ],
+    "skipLibCheck": true
+  },
+  "filesGlob": [
+    "typings/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "android",
+    "ios",
+    "build",
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "typeAcquisition": {
+    "enable": true,
+    "exclude": [
+      "react-native-sentry"
+    ]
+  }
+}
