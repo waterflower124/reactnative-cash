@@ -9,14 +9,18 @@ import {
   TouchableOpacity,
   View,
   ViewStyle,
-  Dimensions
+  Dimensions,
+  StyleSheet,
 } from 'react-native'
+import * as Animatable from 'react-native-animatable'
 import LinearGradient from 'react-native-linear-gradient'
 import Icon from 'react-native-vector-icons/SimpleLineIcons'
 import { AccountProviderIcon, AccountProviderIconName } from './AccountProviderIcon'
 import { Message } from './Message'
 import { SafeAreaView } from './SafeAreaView'
 import Text from './Text'
+
+const AnimatedSafeArea = Animatable.createAnimatableComponent(SafeAreaView)
 
 interface Account {
   id: string
@@ -84,7 +88,7 @@ export class AppMenu extends React.Component<AppMenuProps> {
 
   public render() {
     return (
-      <SafeAreaView style={{ backgroundColor: '#eeeeee', flex: 1 }}>
+      <AnimatedSafeArea animation="slideInLeft" duration={250} style={{ ...StyleSheet.absoluteFillObject , backgroundColor: '#0008', zIndex: 12 }}>
         <View style = {{width: '80%', height: '100%', backgroundColor: '#ffffff', borderTopRightRadius: 20, borderBottomRightRadius: 20, overflow: 'hidden'}}>
         <StatusBar barStyle="dark-content" />
 
@@ -102,7 +106,7 @@ export class AppMenu extends React.Component<AppMenuProps> {
           />
 
           {
-            this.props.showCloseButton &&
+            this.props.showCloseButton || true &&
             <TouchableOpacity onPress={this.onClose} style={{ margin: 10, position: 'absolute', right: 0 }}>
               <Image source={CloseSmallIcon} style={{ width: 22, height: 22 }} />
             </TouchableOpacity>
@@ -142,7 +146,7 @@ export class AppMenu extends React.Component<AppMenuProps> {
 
         {this.renderContent()}
         </View>
-      </SafeAreaView>
+      </AnimatedSafeArea>
     )
   }
 

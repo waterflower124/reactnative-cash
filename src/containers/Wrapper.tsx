@@ -25,8 +25,9 @@ class BaseWrapper extends React.PureComponent<WrapperProps> {
         {
           this.props.menuOpen
             ? <AppMenu/>
-            : this.props.children
+            : null
         }
+        {this.props.children}
       </WrapperContext.Provider>
     )
   }

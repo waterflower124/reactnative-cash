@@ -57,7 +57,7 @@ export function whenLoggedIn(selectAccount?: UserAccount['id']): Thunk<Promise<v
       if (state.session.accounts.length > 0) {
         if (state.navigation.currentAccount.provider.name.toLowerCase() === 'facebook') {
           dispatch(navigationActions.navigateTo('SocialApp', true))
-          dispatch(navigationActions.openMenu())
+          // dispatch(navigationActions.openMenu())
           dispatch(navigationActions.loadMenuStats())
         } else if (state.navigation.currentAccount.provider.name.toLowerCase() === 'instagram') {
           dispatch(navigationActions.navigateTo('MonetizationDeal', true))
