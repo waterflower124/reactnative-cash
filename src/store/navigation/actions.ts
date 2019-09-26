@@ -1,4 +1,4 @@
-import { NavigationActions, StackActions }  from 'react-navigation'
+import { NavigationActions, StackActions, DrawerActions }  from 'react-navigation'
 import { Action }                           from '.'
 import { Thunk }                            from '..'
 import { UserAccount, UserAccountStats }    from '../../httpapi'
@@ -12,11 +12,15 @@ export interface CurrentRoute {
 }
 
 export function openMenu(): Action {
-  return {type: '@Skeep/navigation--OPEN_MENU'}
+  // return {type: '@Skeep/navigation--OPEN_MENU'}
+  return { type: DrawerActions.OPEN_DRAWER }
+  // const action = NavigationActions.openDrawer()
+  // return action
 }
 
 export function closeMenu(): Action {
-  return {type: '@Skeep/navigation--CLOSE_MENU'}
+  // return {type: '@Skeep/navigation--CLOSE_MENU'}
+  return { type: DrawerActions.CLOSE_DRAWER }
 }
 
 export function pushSnapshot(): Action {

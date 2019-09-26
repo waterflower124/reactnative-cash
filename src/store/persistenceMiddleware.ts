@@ -20,7 +20,7 @@ export async function getInitialState(): Promise<State|null> {
   if (payload !== null) {
     const state = JSON.parse(payload)
     if (__DEV__) {
-      console.log(state)
+      // console.log(state)
     }
     return state
   }

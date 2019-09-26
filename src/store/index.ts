@@ -51,7 +51,10 @@ const reducers = combineReducers({
   wallet    : wallet.reducers,
 })
 
-const reduxMiddleware = createReactNavigationReduxMiddleware('root', state => state.nav)
+const reduxMiddleware = createReactNavigationReduxMiddleware('root', state => {
+  // console.log(state)
+  return state.nav
+})
 
 export const store = createStore(reducers, applyMiddleware(
   reduxMiddleware,

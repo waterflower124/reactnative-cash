@@ -87,9 +87,10 @@ export class AppMenu extends React.Component<AppMenuProps> {
   }
 
   public render() {
+    // animation="slideInLeft" duration={250} ...StyleSheet.absoluteFillObject ,
     return (
-      <AnimatedSafeArea animation="slideInLeft" duration={250} style={{ ...StyleSheet.absoluteFillObject , backgroundColor: '#0008', zIndex: 12 }}>
-        <View style = {{width: '80%', height: '100%', backgroundColor: '#ffffff', borderTopRightRadius: 20, borderBottomRightRadius: 20, overflow: 'hidden'}}>
+      <SafeAreaView style={{ backgroundColor: '#0000', zIndex: 12 }}>
+        <View style = {{width: '100%', height: '100%', backgroundColor: '#ffffff', borderTopRightRadius: 20, borderBottomRightRadius: 20, overflow: 'hidden'}}>
         <StatusBar barStyle="dark-content" />
 
         <View style={{
@@ -146,7 +147,7 @@ export class AppMenu extends React.Component<AppMenuProps> {
 
         {this.renderContent()}
         </View>
-      </AnimatedSafeArea>
+      </SafeAreaView>
     )
   }
 

@@ -22,11 +22,11 @@ class BaseWrapper extends React.PureComponent<WrapperProps> {
   public render() {
     return (
       <WrapperContext.Provider value={true}>
-        {
+        {/* {
           this.props.menuOpen
             ? <AppMenu/>
             : null
-        }
+        } */}
         {this.props.children}
       </WrapperContext.Provider>
     )

@@ -40,25 +40,25 @@ const AppMenuRedux = {
       onSelect(menuItem) {
         switch (menuItem) {
           case AppMenuItem.OpenApplications:
-            return dispatch(navigationActions.navigateTo('SocialApp', true))
+            return dispatch(navigationActions.navigateTo('SocialApp'))
           case AppMenuItem.OpenPhotos:
-            return dispatch(navigationActions.navigateTo('SocialPicture', true))
+            return dispatch(navigationActions.navigateTo('SocialPicture'))
           case AppMenuItem.OpenInterests:
-            return dispatch(navigationActions.navigateTo('SocialInterest', true))
+            return dispatch(navigationActions.navigateTo('SocialInterest'))
           case AppMenuItem.OpenCompanies:
-            return dispatch(navigationActions.navigateTo('SocialAdvertiser', true))
+            return dispatch(navigationActions.navigateTo('SocialAdvertiser'))
 
           case AppMenuItem.OpenSubscriptions:
-            return dispatch(navigationActions.navigateTo('Subscription', true))
+            return dispatch(navigationActions.navigateTo('Subscription'))
           case AppMenuItem.OpenSubscriptionHistory:
-            return dispatch(navigationActions.navigateTo('SubscriptionHistory', true))
+            return dispatch(navigationActions.navigateTo('SubscriptionHistory'))
           case AppMenuItem.OpenSubscriptionRecourses:
-            return dispatch(navigationActions.navigateTo('SubscriptionRecourseList', true))
+            return dispatch(navigationActions.navigateTo('SubscriptionRecourseList'))
 
           case AppMenuItem.OpenMonetization:
-            return dispatch(navigationActions.navigateTo('MonetizationDeal', true))
+            return dispatch(navigationActions.navigateTo('MonetizationDeal'))
           case AppMenuItem.OpenWallet:
-            return dispatch(navigationActions.navigateTo('Wallet', true))
+            return dispatch(navigationActions.navigateTo('Wallet'))
 
           case AppMenuItem.AddAccount:
             return dispatch(navigationActions.navigateTo('ConfigureAccount'))

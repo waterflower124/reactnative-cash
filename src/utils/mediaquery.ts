@@ -10,7 +10,7 @@ export interface Mediaquery<T> extends Range {
 }
 
 const windowDimensions = Dimensions.get('window')
-console.log(windowDimensions)
+// console.log(windowDimensions)
 
 export function mediaquery<T extends {}>(mediaqueries: Mediaquery<T>[]): T {
     if (mediaqueries.length <= 0) {

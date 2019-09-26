@@ -7,12 +7,17 @@ import {
   StyleSheet,
   View,
   WebView,
+  TouchableOpacity,
 } from 'react-native'
+// import { TouchableOpacity } from 'react-native-gesture-handler'
+import Interactable from 'react-native-interactable'
 import LinearGradient from 'react-native-linear-gradient'
 import Carousel from 'react-native-snap-carousel'
-import { NavigationScreenProps } from 'react-navigation'
+import Icon from 'react-native-vector-icons/Ionicons'
+import { FlatList, NavigationScreenProps } from 'react-navigation'
 import { connect } from 'react-redux'
 import { CardTransitioner } from '../components/CardTransitioner'
+import { HeaderText } from '../components/HeaderText'
 import { KeepSkip } from '../components/KeepSkip'
 import { Message } from '../components/Message'
 import { SafeAreaView } from '../components/SafeAreaView'
@@ -22,6 +27,7 @@ import { Wrapper } from '../containers/Wrapper'
 import { SocialInterest, UserAccount } from '../httpapi'
 import { Dispatch, State } from '../store'
 import * as itemsActions from '../store/items/actions'
+import * as Styles from '../styles'
 import * as mediaquery from '../utils/mediaquery'
 
 interface SocialInterestScreenProps extends NavigationScreenProps {
@@ -81,72 +87,152 @@ class SocialInterestScreen extends React.Component<SocialInterestScreenProps> {
     }
   }
 
+  onDrawerSnap = () => {
+    console.log('onDrawerSnap')
+  }
+
+  renderItem = ({item}) => {
+    return (
+      <View style={{ flexDirection: 'row',  marginHorizontal: 10, marginVertical: 8, position: 'relative', justifyContent: 'space-between' }}>
+      <TouchableOpacity style={[styles.swipeButton, { borderTopLeftRadius: 5, borderBottomLeftRadius: 5 }]}>
+        <Icon
+          name="ios-checkmark"
+          style={styles.swipeIcon}
+        />
+      </TouchableOpacity>
+    <TouchableOpacity style={[styles.swipeButton, { backgroundColor: '#c46679'}, { borderTopRightRadius: 5, borderBottomRightRadius: 5 }]}>
+        <Icon
+          name="ios-close"
+          style={styles.swipeIcon}
+        />
+      </TouchableOpacity>
+
+      <Interactable.View
+      horizontalOnly={true}
+      snapPoints={[{x: 0}, {x: -80}, {x: 80}]}
+      onSnap={this.onDrawerSnap}
+      style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0}}
+      >
+      <View style={[styles.item, styles.shadow]}>
+        <View style={{ height: 60, width: 80, alignItems: 'center', justifyContent: 'center'}}>
+        <Image
+          source={{ uri: 'https://birkeland.uib.no/wp-content/themes/bcss/images/no.png' }}
+          resizeMode="cover"
+          style={{ height: 60, width: 60 }}
+        />
+        </View>
+        <View style={{ flex: 1 }}>
+          <Text style={[Styles.text, { fontSize: 20, marginBottom: 5, color: '#000' }]}>Sustainability</Text>
+          <Text style={[Styles.text, { fontSize: 15, marginBottom: 5, color: '#000' }]}>Ads based on</Text>
+          <Text style={[Styles.text, { fontSize: 10, color: '#ccc' }]}>Your interests</Text>
+        </View>
+      </View>
+    </Interactable.View>
+    </View>
+    )
+  }
+
+  renderContent = () => {
+    return (
+      <View style={styles.background}>
+        {/* <LinearGradient colors={['#00000080', '#00000040', '#00000000']} locations={[0.2, 0.7, 1]}
+                        start={{x: 0, y: 0}} end={{x: 1, y: 1}}
+                        style={styles.background2}> */}
+        <SafeAreaView style={{ flex: 1 }}>
+          {/* <LinearGradient colors={['#364a6b', '#1e293b']}
+            start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }}
+            style={styles.background2} /> */}
+          <View style={styles.container}>
+            <Header color="dark" style={{ alignItems: 'center' }}>
+            </Header>
+            <HeaderText dark>
+              Interests
+            </HeaderText>
+
+            <FlatList
+              data={[{}, {}, {}, {}, {}, {}]}
+              keyExtractor={(item, index) => index.toString()}
+              style={{ marginVertical: 30, flex: 1 }}
+              renderItem={this.renderItem}
+            />
+          </View>
+
+          {/* <View style={styles.actionsContainer}>
+            <KeepSkip onAccept={this.onAccept} onDecline={this.onDecline} />
+          </View> */}
+        </SafeAreaView>
+        {/* </LinearGradient> */}
+      </View>
+    )
+  }
+
   public render() {
     return (
       <Wrapper>
         <StatusBar barStyle="light-content"/>
-        <CardTransitioner
+        {/* <CardTransitioner
           ref={x => this.transitioner = x}
           current={this.props.current}
           previous={this.props.previous}
           eof={this.props.eof}
           eod={false}
           renderScene={this.renderContent}
-        />
+        /> */}
+        {this.renderContent()}
       </Wrapper>
     )
   }
 
-  private renderContent = (interest: SocialInterest) => {
-    return (
-      <View style={styles.background}>
-        <LinearGradient colors={['#00000080', '#00000040', '#00000000']} locations={[0.2, 0.7, 1]}
-                        start={{x: 0, y: 0}} end={{x: 1, y: 1}}
-                        style={styles.background2}>
-          <SafeAreaView style={{
-            flex: 1,
-          }}>
-            <View style={{
-              justifyContent: 'space-evenly',
-              alignItems    : 'center',
-              flex          : 1,
-              alignSelf     : 'stretch',
-            }}>
-              <Header style={{alignItems: 'center'}}>
-                <Image
-                  source={{uri: interest.image_url}}
-                  style={styles.logo}
-                  resizeMode="contain"
-                />
-              </Header>
+  // private renderContent = (interest: SocialInterest) => {
+  //   return (
+  //     <View style={styles.background}>
+  //       <LinearGradient colors={['#00000080', '#00000040', '#00000000']} locations={[0.2, 0.7, 1]}
+  //                       start={{x: 0, y: 0}} end={{x: 1, y: 1}}
+  //                       style={styles.background2}>
+  //         <SafeAreaView style={{
+  //           flex: 1,
+  //         }}>
+  //           <View style={{
+  //             justifyContent: 'space-evenly',
+  //             alignItems    : 'center',
+  //             flex          : 1,
+  //             alignSelf     : 'stretch',
+  //           }}>
+  //             <Header style={{alignItems: 'center'}}>
+  //               <Image
+  //                 source={{uri: interest.image_url}}
+  //                 style={styles.logo}
+  //                 resizeMode="contain"
+  //               />
+  //             </Header>
 
-              <Text allowFontScaling={false} style={{fontSize: 20}}>
-                {interest.name}
-              </Text>
-              <Message
-                id="screens.social_interest.explain_1"
-                defaultMessage={`Ads based on:\nYour interests`}
-                style={{fontSize: 18}}
-              />
+  //             <Text allowFontScaling={false} style={{fontSize: 20}}>
+  //               {interest.name}
+  //             </Text>
+  //             <Message
+  //               id="screens.social_interest.explain_1"
+  //               defaultMessage={`Ads based on:\nYour interests`}
+  //               style={{fontSize: 18}}
+  //             />
 
-              <Message
-                id="screens.social_interest.explain_2"
-                defaultMessage="You have this interest because you click on {interestName} Ads"
-                values={{interestName: interest.name}}
-                style={{fontSize: 14, width: '70%', textAlign: 'center'}}
-              />
+  //             <Message
+  //               id="screens.social_interest.explain_2"
+  //               defaultMessage="You have this interest because you click on {interestName} Ads"
+  //               values={{interestName: interest.name}}
+  //               style={{fontSize: 14, width: '70%', textAlign: 'center'}}
+  //             />
 
-              {this.renderCarousel(interest)}
-            </View>
+  //             {this.renderCarousel(interest)}
+  //           </View>
 
-            <View style={styles.actionsContainer}>
-              <KeepSkip onAccept={this.onAccept} onDecline={this.onDecline}/>
-            </View>
-          </SafeAreaView>
-        </LinearGradient>
-      </View>
-    )
-  }
+  //           <View style={styles.actionsContainer}>
+  //             <KeepSkip onAccept={this.onAccept} onDecline={this.onDecline}/>
+  //           </View>
+  //         </SafeAreaView>
+  //       </LinearGradient>
+  //     </View>
+  //   )
+  // }
 
   private renderCarousel(_interest: SocialInterest) {
     const windowSize = Dimensions.get('window')
@@ -228,12 +314,12 @@ class SocialInterestScreen extends React.Component<SocialInterestScreenProps> {
 export default connect(SocialInterestScreen.mapStateToProps, SocialInterestScreen.mapDispatchToProps)(SocialInterestScreen)
 
 const styles = StyleSheet.create({
-  background            : {backgroundColor: '#3c5277', flex: 1},
+  background            : {backgroundColor: '#FFF', flex: 1},
   background2           : {flex: 1},
   container             : {
     flex          : 1,
-    alignItems    : 'center',
-    justifyContent: 'space-evenly',
+    // alignItems    : 'center',
+    // justifyContent: 'space-evenly',
     marginBottom  : 60,
   },
   logo                  : {
@@ -297,4 +383,36 @@ const styles = StyleSheet.create({
   permissionDescription : {alignSelf: 'stretch', textAlign: 'center', paddingHorizontal: 10, fontSize: 10, marginBottom: 5},
   permissionDisabledText: {alignSelf: 'stretch', textAlign: 'center', paddingHorizontal: 10, fontSize: 8, marginBottom: 5},
   actionsContainer      : {justifyContent: 'center', alignSelf: 'stretch', marginVertical: 20},
+  shadow: {
+    shadowColor: '#000',
+    shadowOffset: {
+      height: 2,
+      width: 2,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 8,
+  },
+  item: {
+    width: '100%',
+    height: 80,
+    padding: 10,
+    borderRadius: 5,
+    backgroundColor: '#FFF',
+    flexDirection: 'row',
+    zIndex: 1122,
+  },
+  swipeButton: {
+    // height: '100%',
+    width: 80,
+    height: 80,
+    // flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#49edd4',
+  },
+  swipeIcon: {
+    fontSize: 50,
+    color: '#FFF',
+  },
 })
