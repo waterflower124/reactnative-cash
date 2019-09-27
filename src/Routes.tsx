@@ -182,10 +182,6 @@ const tabNav = createBottomTabNavigator({
       height: 70,
       borderRadius: 35,
       borderTopWidth: 0,
-      // paddingBottom: 0,
-      // borderColor: '#000',
-      // borderWidth: 2,
-      // overflow: 'hidden',
       shadowColor: '#000',
       shadowOffset: {
         height: 2,
@@ -195,6 +191,11 @@ const tabNav = createBottomTabNavigator({
       shadowRadius: 15,
       elevation: 8,
       zIndex: 1122,
+    },
+    containerStyle: {
+      zIndex: 1,
+      height: 70,
+      position: 'absolute',
     },
   },
 })
