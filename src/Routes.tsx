@@ -1,6 +1,7 @@
 import React from 'react'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import MIcon from 'react-native-vector-icons/MaterialIcons'
+import { getBottomSpace } from 'react-native-iphone-x-helper'
 import { createAppContainer, createBottomTabNavigator, createDrawerNavigator, createStackNavigator, NavigationRouteConfigMap } from 'react-navigation'
 import { AppMenu } from './containers/AppMenu'
 import AddEmailAccountScreen          from './screens/AddEmailAccountScreen'
@@ -8,6 +9,7 @@ import AddFacebookAccountScreen       from './screens/AddFacebookAccountScreen'
 import AddInstagramAccountScreen      from './screens/AddInstagramAccountScreen'
 import ConfigureAccountScreen         from './screens/ConfigureAccountScreen'
 import ConfigureAppScreen             from './screens/ConfigureAppScreen'
+import HomeScreen                     from './screens/HomeScreen'
 import LegalDocumentScreen            from './screens/LegalDocumentScreen'
 import LostPasswordScreen             from './screens/LostPasswordScreen'
 import MonetizationConfigureScreen    from './screens/MonetizationConfigureScreen'
@@ -75,6 +77,10 @@ const authStack = createStackNavigator({
   LostPassword            : {screen: LostPasswordScreen},
   PasswordRecovery        : {screen: PasswordRecoveryScreen},
   LegalDocument           : {screen: LegalDocumentScreen},
+  SelectAccount           : {screen: SelectAccountScreen},
+  AddEmailAccount         : {screen: AddEmailAccountScreen},
+  AddFacebookAccount      : {screen: AddFacebookAccountScreen},
+  AddInstagramAccount     : {screen: AddInstagramAccountScreen},
 }, {
   initialRouteName  : 'Welcome',
   cardStyle         : {
@@ -84,13 +90,14 @@ const authStack = createStackNavigator({
 })
 
 const HomeNav = createStackNavigator({
-  ConfigureApp            : {screen: ConfigureAppScreen},
+  HomeScreen              : {screen: HomeScreen},
+  // ConfigureApp            : {screen: ConfigureAppScreen},
   SettingsAccount         : {screen: SettingsAccountScreen},
   ConfigureAccount        : {screen: ConfigureAccountScreen},
   SelectAccount           : {screen: SelectAccountScreen},
   SettingsAppLanguage     : {screen: SettingsAppLanguageScreen},
   LegalDocument           : {screen: LegalDocumentScreen},
-  SettingsAlertFrequency  : {screen: SettingsAlertFrequencyScreen},
+  // SettingsAlertFrequency  : {screen: SettingsAlertFrequencyScreen},
   AddEmailAccount         : {screen: AddEmailAccountScreen},
   AddFacebookAccount      : {screen: AddFacebookAccountScreen},
   AddInstagramAccount     : {screen: AddInstagramAccountScreen},
@@ -100,8 +107,8 @@ const HomeNav = createStackNavigator({
   SubscriptionList        : {screen: SubscriptionListScreen},
   SocialApp               : {screen: SocialAppScreen},
   SocialPicture           : {screen: SocialPictureScreen},
-  // SocialInterest          : {screen: SocialInterestScreen},
-  // SocialAdvertiser        : {screen: SocialAdvertiserScreen},
+  SocialInterest          : {screen: SocialInterestScreen},
+  SocialAdvertiser        : {screen: SocialAdvertiserScreen},
   MonetizationDeal        : {screen: MonetizationDealScreen},
   MonetizationDealSummary : {screen: MonetizationDealSummaryScreen},
   MonetizationConfigure   : {screen: MonetizationConfigureScreen},
@@ -110,7 +117,7 @@ const HomeNav = createStackNavigator({
   WalletAddBankAccount    : {screen: WalletAddBankAccountScreen},
   ScanResult              : {screen: ScanResultScreen},
 }, {
-  initialRouteName: 'SocialApp',
+  initialRouteName: 'HomeScreen',
   headerMode: 'none',
 })
 
@@ -131,8 +138,8 @@ const tabNav = createBottomTabNavigator({
       },
     },
   },
-  SocialInterest: {
-    screen: SocialInterestScreen,
+  ConfigureApp: {
+    screen: ConfigureAppScreen,
     navigationOptions: {
       tabBarLabel: 'My Profile',
       tabBarIcon: ({ tintColor }) => {
@@ -146,8 +153,8 @@ const tabNav = createBottomTabNavigator({
     },
   },
   },
-  SocialAdvertiser: {
-    screen: SocialAdvertiserScreen,
+  SettingsAlertFrequency: {
+    screen: SettingsAlertFrequencyScreen,
     navigationOptions: {
       tabBarLabel: 'Alerts',
       tabBarIcon: ({ tintColor }) => {
@@ -165,23 +172,27 @@ const tabNav = createBottomTabNavigator({
   tabBarOptions: {
     inactiveTintColor: '#cccccc',
     activeTintColor: '#c46679',
+    safeAreaInset: { bottom: 'never', top: 'never' },
     style: {
       backgroundColor: '#FFF',
       position: 'absolute',
       left: 30,
       right: 30,
-      bottom: 0,
+      bottom: getBottomSpace() + 10,
       height: 70,
       borderRadius: 35,
       borderTopWidth: 0,
-      overflow: 'hidden',
+      // paddingBottom: 0,
+      // borderColor: '#000',
+      // borderWidth: 2,
+      // overflow: 'hidden',
       shadowColor: '#000',
       shadowOffset: {
         height: 2,
         width: 2,
       },
       shadowOpacity: 0.5,
-      shadowRadius: 5,
+      shadowRadius: 15,
       elevation: 8,
       zIndex: 1122,
     },
@@ -190,12 +201,12 @@ const tabNav = createBottomTabNavigator({
 
 const drawerStack = createDrawerNavigator({
   HomeTabs: { screen: tabNav },
-  SocialInterest: {
-    screen: SocialInterestScreen,
-  },
-  SocialAdvertiser: {
-    screen: SocialAdvertiserScreen,
-  },
+  // ConfigureApp: {
+  //   screen: ConfigureAppScreen,
+  // },
+  // SocialAdvertiser: {
+  //   screen: SocialAdvertiserScreen,
+  // },
 }, {
   drawerBackgroundColor: '#0000',
   contentComponent: AppMenu,

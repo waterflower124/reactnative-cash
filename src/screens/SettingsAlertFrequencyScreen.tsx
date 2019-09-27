@@ -6,6 +6,7 @@ import { State }                 from '../store'
 import { ScrollView, StyleSheet, View } from 'react-native'
 import { Background }                   from '../components/Background'
 import { Checkbox }                     from '../components/Checkbox'
+import { HeaderText } from '../components/HeaderText'
 import { Message }                      from '../components/Message'
 import { SafeAreaView }                 from '../components/SafeAreaView'
 import Switch                           from '../components/Switch'
@@ -38,8 +39,15 @@ class SettingsAlertFrequencyScreen extends React.Component<SettingsAlertFrequenc
             <Wrapper>
                 <Background>
                     <SafeAreaView style={{flex: 1}}>
-                        <Header containerStyle={{marginTop: 10}} style={{alignItems: 'center'}}>                           
+                        <Header containerStyle={{marginTop: 10}} style={{
+                            alignItems: 'center',
+                            }}>
                         </Header>
+                        <View style={{ marginTop: 10, marginBottom: 20}}>
+                        <HeaderText>
+                            Alerts frequency
+                        </HeaderText>
+                        </View>
 
                         <ScrollView style={styles.container}>
                             <View style={styles.section}>
@@ -203,7 +211,7 @@ const styles = StyleSheet.create({
     },
 
     sectionTitle: {
-        textAlign   : 'center',
+        // textAlign   : 'center',
         fontSize    : 22,
         marginBottom: 20,
     },

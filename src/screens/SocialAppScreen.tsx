@@ -28,6 +28,7 @@ import { Header } from '../containers/Header'
 import { Wrapper } from '../containers/Wrapper'
 import * as mediaquery from '../utils/mediaquery'
 import { HeaderText } from '../components/HeaderText';
+import TabPadding from '../components/TabPadding';
 
 interface Permissions {
   [permissionName: string]: boolean
@@ -225,6 +226,7 @@ class SocialAppScreen extends React.Component<SocialAppScreenProps, SocialAppScr
           <View style={styles.actionsContainer}>
             <KeepSkip onAccept={this.onAccept} onDecline={this.onDecline} />
           </View>
+          <TabPadding />
         </SafeAreaView>
         {/* </LinearGradient> */}
       </View>
