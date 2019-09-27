@@ -13,6 +13,7 @@ import com.BV.LinearGradient.LinearGradientPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.psykar.cookiemanager.CookieManagerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
+import com.wix.interactable.Interactable;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -43,7 +44,8 @@ public class MainApplication extends Application implements ReactApplication {
             new LinearGradientPackage(),
             new RNGestureHandlerPackage(),
             new CookieManagerPackage(),
-            new VectorIconsPackage()
+            new VectorIconsPackage(),
+            new Interactable()
       );
     }
 

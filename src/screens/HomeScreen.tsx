@@ -35,10 +35,8 @@ import {
   AppMenuItem, AppMenuProps, AppMenuStats, AppMenuType,
 }                               from '../components/AppMenu'
 import { UserAccountStats }     from '../httpapi'
-import { Header } from '../components/Header'
 import { HeaderText } from '../components/HeaderText'
 
-const AnimatedSafeArea = Animatable.createAnimatableComponent(SafeAreaView)
 
 interface Account {
   id: string

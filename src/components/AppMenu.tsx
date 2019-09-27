@@ -12,7 +12,6 @@ import {
   Dimensions,
   StyleSheet,
 } from 'react-native'
-import * as Animatable from 'react-native-animatable'
 import LinearGradient from 'react-native-linear-gradient'
 import Icon from 'react-native-vector-icons/SimpleLineIcons'
 import { AccountProviderIcon, AccountProviderIconName } from './AccountProviderIcon'
@@ -20,7 +19,6 @@ import { Message } from './Message'
 import { SafeAreaView } from './SafeAreaView'
 import Text from './Text'
 
-const AnimatedSafeArea = Animatable.createAnimatableComponent(SafeAreaView)
 
 interface Account {
   id: string
