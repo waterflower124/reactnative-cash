@@ -48,7 +48,7 @@ const items: Array<ConfigureAppItem> = [
     //     labelId     : 'screens.configure_app.settings_alert_frequency',
     //     labelDefault: 'Alerts frequency',
     //     onSelect    : navigationActions.navigateTo('SettingsAlertFrequency'),
-    // },    
+    // },
     {
         icon        : require('../../assets/icons/bx-book-bookmark.png'),
         labelId     : 'screens.configure_app.personal_archive',
@@ -78,7 +78,7 @@ class ConfigureAppScreen extends React.Component<ConfigureAppScreenProps> {
                     <SafeAreaView style={{flex: 1}}>
                     <StatusBar barStyle="dark-content" />
 
-                        <Header containerStyle={{marginTop: 10}} style={{alignItems: 'center'}} color='dark' noMenu={false}> 
+                    <Header containerStyle={{marginTop: 10}} style={{alignItems: 'center'}} color='dark' noMenu={false}> 
                             {/* <Message
                                 id="screens.configure_app.title"
                                 defaultMessage="Settings"
@@ -97,14 +97,14 @@ class ConfigureAppScreen extends React.Component<ConfigureAppScreenProps> {
                             {items.map((item, idx) => (
                                 <TouchableOpacity key={idx} onPress={this.onSelect(item)} style={{
                                     flexDirection:'row',
-                                    marginBottom:20,
+                                    // marginBottom:20,
                                     alignItems:'center'
                                 }}>
                                     <Image source={item.icon} style={{flex: -1, resizeMode: 'cover', marginBottom: 5, marginRight:20, height:20}}/>
                                     <Message
                                         id={item.labelId}
                                         defaultMessage={item.labelDefault}
-                                        style={{ color:'#000', fontSize: 25}}
+                                        style={{ color:'#000', fontSize: 25, marginBottom: 20  }}
                                     />
                                 </TouchableOpacity>
                             ))}
