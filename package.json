@@ -6,10 +6,12 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "postinstall": "cd modified && ./setup.sh",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.6.2",
     "i18n-iso-countries": "^3.7.8",
     "intl": "^1.2.5",
     "moment": "^2.24.0",

@@ -1,6 +1,7 @@
+// import { AsyncStorage }           from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage'
 import * as countries             from 'i18n-iso-countries'
 import moment                     from 'moment'
-import { AsyncStorage }           from 'react-native'
 import { lang as deviceLanguage } from '../utils/locale'
 
 import 'intl'

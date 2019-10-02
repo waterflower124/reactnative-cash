@@ -4,3 +4,4 @@ cd ../
 cd ios
 pod install
 cd ../
+npx jetify
