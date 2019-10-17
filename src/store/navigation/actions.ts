@@ -143,11 +143,11 @@ export function navigateToAccountSetup(): Thunk<void> {
     const {navigation: {currentAccount}} = getState()
 
     if (currentAccount.provider.name.toLowerCase() === 'facebook') {
-      dispatch(navigateTo('AddFacebookAccount', true, {currentAccount: true}))
+      dispatch(navigateTo('AddFacebookAccount', false, {currentAccount: true}))
     } else if (currentAccount.provider.name.toLowerCase() === 'instagram') {
-      dispatch(navigateTo('AddInstagramAccount', true, {currentAccount: true}))
+      dispatch(navigateTo('AddInstagramAccount', false, {currentAccount: true}))
     } else {
-      dispatch(navigateTo('AddEmailAccount', true, {currentAccount: true}))
+      dispatch(navigateTo('AddEmailAccount', false, {currentAccount: true}))
     }
   }
 }
@@ -157,10 +157,12 @@ export function toggleMulti(): Thunk<void> {
     const currentRoute = getCurrentRoute(getState()).routeName
     switch (currentRoute) {
       case 'Subscription':
-        return dispatch(navigateTo('SubscriptionList', true))
+        return dispatch(navigateTo('SubscriptionList'))
+        // return dispatch(navigateTo('SubscriptionList', true))
 
       case 'SubscriptionList':
-        return dispatch(navigateTo('Subscription', true))
+        return dispatch(navigateTo('Subscription'))
+        // return dispatch(navigateTo('Subscription', true))
 
       default:
         // do nothing

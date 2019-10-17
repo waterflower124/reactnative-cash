@@ -61,12 +61,15 @@ export function whenLoggedIn(selectAccount?: UserAccount['id']): Thunk<Promise<v
           // dispatch(navigationActions.openMenu())
           dispatch(navigationActions.loadMenuStats())
         } else if (state.navigation.currentAccount.provider.name.toLowerCase() === 'instagram') {
-          dispatch(navigationActions.navigateTo('MonetizationDeal', true))
+          // dispatch(navigationActions.navigateTo('MonetizationDeal', true))
+          dispatch(navigationActions.navigateTo('MonetizationDeal'))
         } else {
-          dispatch(navigationActions.navigateTo('Subscription', true))
+          // dispatch(navigationActions.navigateTo('Subscription', true))
+          dispatch(navigationActions.navigateTo('Subscription'))
         }
       } else {
-        dispatch(navigationActions.navigateTo('SelectAccount', true))
+        // dispatch(navigationActions.navigateTo('SelectAccount', true))
+        dispatch(navigationActions.navigateTo('SelectAccount'))
       }
     }
   }
@@ -76,12 +79,15 @@ export function afterScanResult(): Thunk<void> {
   return (dispatch, getState) => {
     const state = getState()
     if (state.navigation.currentAccount.provider.name.toLowerCase() === 'facebook') {
-      dispatch(navigationActions.navigateTo('SocialApp', true))
+      // dispatch(navigationActions.navigateTo('SocialApp', true))
+      dispatch(navigationActions.navigateTo('drawerStack', true))
       dispatch(navigationActions.openMenu())
     } else if (state.navigation.currentAccount.provider.name.toLowerCase() === 'instagram') {
-      dispatch(navigationActions.navigateTo('MonetizationDeal', true))
+      // dispatch(navigationActions.navigateTo('MonetizationDeal', true))
+      dispatch(navigationActions.navigateTo('MonetizationDeal'))
     } else {
-      dispatch(navigationActions.navigateTo('Subscription', true))
+      // dispatch(navigationActions.navigateTo('Subscription', true))
+      dispatch(navigationActions.navigateTo('Subscription'))
     }
   }
 }
@@ -184,7 +190,8 @@ export function logout(): Thunk<Promise<void>> {
     await sessions.destroy(http)
       .catch(() => Promise.resolve()) // FIXME: Force to resolve call
     await cleanStorage()
-    dispatch(navigationActions.navigateTo('Signin', true))
+    // dispatch(navigationActions.navigateTo('Signin', true))
+    dispatch(navigationActions.navigateTo('authStack', true))
   }
 }
 
@@ -289,7 +296,8 @@ export function deepLink(url?: string): Thunk<Promise<boolean>> {
 
       case 'password_recovery':
         await dispatch(loginToken(querydata['token'])) // tslint:disable-line:no-string-literal
-        dispatch(navigationActions.navigateTo('PasswordRecovery', true))
+        // dispatch(navigationActions.navigateTo('PasswordRecovery', true))
+        dispatch(navigationActions.navigateTo('PasswordRecovery'))
         return true
 
       default:

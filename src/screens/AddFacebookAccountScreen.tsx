@@ -19,7 +19,8 @@ const mapDispatchToProps = (dispatch: Dispatch): Partial<AddFacebookAccountScree
   return {
     async onLogin(email, password, cookies) {
       await dispatch(sessionActions.createFacebookAccount(email, password, cookies))
-      dispatch(navigationActions.navigateTo('ScanResult', true))
+      // dispatch(navigationActions.navigateTo('ScanResult', true))
+      dispatch(navigationActions.navigateTo('ScanResult'))
     },
   }
 }

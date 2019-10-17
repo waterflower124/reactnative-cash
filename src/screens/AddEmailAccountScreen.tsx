@@ -63,7 +63,8 @@ class AddEmailAccountScreen extends React.Component<AddEmailAccountScreenProps> 
         const success = await dispatch(sessionActions.createEmailAccount(email, password))
 
         if (success) {
-          dispatch(navigationActions.navigateTo('ScanResult', true))
+          // dispatch(navigationActions.navigateTo('ScanResult', true))
+          dispatch(navigationActions.navigateTo('ScanResult'))
         }
       },
     }
