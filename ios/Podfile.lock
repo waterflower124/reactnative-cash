@@ -192,6 +192,8 @@ PODS:
     - React
   - react-native-splash-screen (3.2.0):
     - React
+  - react-native-webview (7.4.2):
+    - React
   - React-RCTActionSheet (0.61.1):
     - React-Core/RCTActionSheetHeaders (= 0.61.1)
   - React-RCTAnimation (0.61.1):
@@ -269,6 +271,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - react-native-cookies (from `../node_modules/react-native-cookies/ios`)
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
+  - react-native-webview (from `../node_modules/react-native-webview`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -333,6 +336,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-cookies/ios"
   react-native-splash-screen:
     :path: "../node_modules/react-native-splash-screen"
+  react-native-webview:
+    :path: "../node_modules/react-native-webview"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -380,7 +385,7 @@ SPEC CHECKSUMS:
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
   Interactable: 58b1decd58e30ecf2e33e0d1b023f963751f8632
   RCTRequired: 53825815218847d3e9c7b6d92ad2d197a926d51e
-  RCTRestart: c009d929d5387d935250d5e30d4c1390f28bc4b3
+  RCTRestart: 05aa14bfc0f0f0b02769be197cbd81afa66ea627
   RCTTypeSafety: d886540c518e53064dfa081bf7693fd650699b92
   React: 5dea58967c421bd1fdf6b94c18b9ed0f5134683c
   React-Core: b381e65aa0da9b94b9dcdc4a99298075b1c3876c
@@ -391,6 +396,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 574d597112f9ea3d1b717f6fb62aef764c70dd6f
   react-native-cookies: 854d59c4135c70b92a02ca4930e68e4e2eb58150
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
+  react-native-webview: 5e82a4853e16e02bb6cb184ae4892df71c200571
   React-RCTActionSheet: af4d951113b1e068bb30611f91b984a7a73597ff
   React-RCTAnimation: 4f518d70bb6890b7c3d9d732f84786d6693ca297
   React-RCTBlob: 072a4888c08de0eef6d04eaa727d25e577e6ff26
@@ -401,7 +407,7 @@ SPEC CHECKSUMS:
   React-RCTText: 81b62b4e7f11531a5154e4daa5617670d5a2d5de
   React-RCTVibration: 8be61459e3749d1fb02cf414edd05b3007622882
   ReactCommon: 4fba5be89efdf0b5720e0adb3d8d7edf6e532db0
-  RNCAsyncStorage: 60a80e72d95bf02a01cace55d3697d9724f0d77f
+  RNCAsyncStorage: 5ae4d57458804e99f73d427214442a6b10a53856
   RNDeviceInfo: e7c5fcde13d40e161d8a27f6c5dc69c638936002
   RNFS: a8fbe7060fa49157d819466404794ad9c58e58cf
   RNGestureHandler: 4cb47a93019c1a201df2644413a0a1569a51c8aa

@@ -1,5 +1,6 @@
 import React from 'react'
-import { ActivityIndicator, WebView, WebViewIOSLoadRequestEvent } from 'react-native'
+import { ActivityIndicator, WebViewIOSLoadRequestEvent } from 'react-native'
+import { WebView } from 'react-native-webview'
 import * as promises from '../utils/promises'
 import { Overlay, OverlayProps } from './Overlay'
 

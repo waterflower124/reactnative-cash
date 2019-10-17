@@ -5,15 +5,16 @@ import {
   Image,
   StatusBar,
   StyleSheet,
-  View,
-  WebView,
   TouchableOpacity,
+  // WebView,
+  View,
 } from 'react-native'
 // import { TouchableOpacity } from 'react-native-gesture-handler'
 import Interactable from 'react-native-interactable'
 import LinearGradient from 'react-native-linear-gradient'
 import Carousel from 'react-native-snap-carousel'
 import Icon from 'react-native-vector-icons/Ionicons'
+import { WebView } from 'react-native-webview'
 import { FlatList, NavigationScreenProps } from 'react-navigation'
 import { connect } from 'react-redux'
 import { CardTransitioner } from '../components/CardTransitioner'

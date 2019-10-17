@@ -1,6 +1,7 @@
 import React from 'react'
-import { ActivityIndicator, Dimensions, WebView } from 'react-native'
+import { ActivityIndicator, Dimensions } from 'react-native'
 import Cookies from 'react-native-cookies'
+import { WebView } from 'react-native-webview'
 import URL from 'url-parse'
 
 const LOGIN_URL = 'https://m.facebook.com/login.php'

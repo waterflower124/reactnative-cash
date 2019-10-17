@@ -1,5 +1,6 @@
 import React from 'react'
-import { ActivityIndicator, WebView } from 'react-native'
+import { ActivityIndicator } from 'react-native'
+import { WebView } from 'react-native-webview'
 import { NavigationScreenProps } from 'react-navigation'
 import { TitleBar } from '../containers/TitleBar'
 import { getCurrentLanguage } from '../translate'
