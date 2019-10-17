@@ -304,7 +304,7 @@ export class BaseAppMenu extends React.Component<AppMenuProps> {
               logoSource={WalletIcon}
               onSelect={this.onSelect(AppMenuItem.OpenWallet)}
             />
-            {/* <SpecialAppMenuItemComponent
+            <SpecialAppMenuItemComponent
               labelId="components.menu.monetization_label"
               labelDefault="Monetization"
               descriptionId="components.menu.monetization_description"
@@ -315,7 +315,7 @@ export class BaseAppMenu extends React.Component<AppMenuProps> {
               buttonLabelId="components.menu.monetization_button"
               buttonLabelDefault="GET NOW"
               onSelect={this.onSelect(AppMenuItem.OpenMonetization)}
-            /> */}
+            />
           </React.Fragment>
         )
 
